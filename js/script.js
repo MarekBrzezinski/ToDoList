@@ -30,7 +30,7 @@
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
-        
+
         removeButtons.forEach((removeButton,index) => {
             removeButton.addEventListener("click",() => {
              removeTask (index);
@@ -45,15 +45,15 @@
             });
         });
     }
-    
+
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-            <button class="listButton listButton__done js-done">&#10003</button>     
-            <li class="list__item${task.done ? " list__item--done" : ""}" > 
-                    ${task.content}   
+            <button class="listButton listButton__done js-done">&#10003</button>
+            <li class="list__item${task.done ? " list__item--done" : ""}" >
+                    ${task.content}
             </li>
             <button class="listButton listButton__delate js-remove">&#128465;</button>
             `;
@@ -68,7 +68,7 @@
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        
+
         if (newTaskContent === "") {
             return;
         }
@@ -80,7 +80,7 @@
         render();
 
         const form = document.querySelector(".js-form");
-        
+
         form.addEventListener("submit", onFormSubmit);
     };
 
