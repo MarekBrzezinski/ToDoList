@@ -5,7 +5,7 @@
             done: false,
         },
         {
-            content: "zjejśc pierogi",
+            content: "już zjadłem pierogi",
             done: true,
         },
     ];
